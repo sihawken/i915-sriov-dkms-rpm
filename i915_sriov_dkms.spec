@@ -23,6 +23,8 @@ This package enables a new i915 driver from intel that supports SR-IOV.
 # sources to be used by DKMS
 mkdir -p %{buildroot}%{_usr}/src/%{name}-%{version}
 
+cp -fr ./* %{buildroot}%{_usrsrc}/%{name}-%{version}/
+
 %post
 dkms --rpm_safe_upgrade add -m %{dkms_name} -v %{version} -k $(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}') -q || :
 dkms --rpm_safe_upgrade build -m %{dkms_name} -v %{version} -k $(rpm -qa kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}') -q || :
