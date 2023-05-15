@@ -14,6 +14,8 @@ ExclusiveArch:   x86_64
 %description
 This package enables a new i915 driver from intel that supports SR-IOV.
 
+%global debug_package %{nil}
+
 %prep
 %setup
 
