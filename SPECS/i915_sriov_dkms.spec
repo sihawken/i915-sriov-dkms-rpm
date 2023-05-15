@@ -1,3 +1,5 @@
+%_topdir    $(pwd)
+
 Summary:         Linux i915 module patched with SR-IOV support
 Name:            i915_sriov_dkms
 Version:         6.1.11
@@ -15,6 +17,7 @@ ExclusiveArch:   x86_64
 This package enables a new i915 driver from intel that supports SR-IOV.
 
 %prep
+%setup -qn %{name}-%{version}
 
 %build
 
