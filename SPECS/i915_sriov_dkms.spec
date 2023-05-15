@@ -1,4 +1,4 @@
-%_topdir    $(pwd)
+%_topdir    ../
 
 Summary:         Linux i915 module patched with SR-IOV support
 Name:            i915_sriov_dkms
